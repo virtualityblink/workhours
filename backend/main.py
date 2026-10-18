@@ -3,6 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pwdlib import PasswordHash
 from pydantic import BaseModel
 
+import os
+
+print("Робоча директорія:", os.getcwd())
+
 from modules.jfile import jfile
 
 class LoginData(BaseModel):
