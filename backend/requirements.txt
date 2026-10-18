@@ -1,0 +1,3 @@
+fastapi
+pwdlib[argon2]
+uvicorn
