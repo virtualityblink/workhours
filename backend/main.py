@@ -15,6 +15,16 @@ class RegData(BaseModel):
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://workhours-site.onrender.com"
+    ],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 data_users = "data/users.json"
 
 hash = PasswordHash.recommended()
